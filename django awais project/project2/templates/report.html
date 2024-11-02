@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            width: 150px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Full Report</h1>
+
+    <h2>Companies</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+        </tr>
+        {% for company in companies %}
+        <tr>
+            <td>{{ company.name }}</td>
+            <td>{{ company.location }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Incomes</h2>
+    <table>
+        <tr>
+            <th>Company Income</th>
+            <th>Total Income</th>
+        </tr>
+        {% for income in incomes %}
+        <tr>
+            <td>{{ income.company_income }}</td>
+            <td>{{ income.total_income }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Expenses</h2>
+    <table>
+        <tr>
+            <th>Company Expense</th>
+            <th>Total Expense</th>
+        </tr>
+        {% for expense in expenses %}
+        <tr>
+            <td>{{ expense.company_expense }}</td>
+            <td>{{ expense.total_expense }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

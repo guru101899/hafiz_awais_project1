@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+</head>
+<body>
+    
+<form method="post">
+  {% csrf_token %}
+
+    <label> enter company name</label> <br>
+    <input type="text" name="c_name"><br><br>
+
+    <label> enter company location</label><br>
+    <input type="text" name="c_location"> <br><br>
+
+    <input type="submit" value="confirm">
+
+</form>
+    
+</body>
+</html>
