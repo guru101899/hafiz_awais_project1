@@ -9,14 +9,9 @@
     
 <form method="post">
   {% csrf_token %}
+  {{form.as_p}}
 
-    <label> enter company name</label> <br>
-    <input type="text" name="c_name"><br><br>
-
-    <label> enter company location</label><br>
-    <input type="text" name="c_location"> <br><br>
-
-    <input type="submit" value="confirm">
+  <input type="submit" value="confirm">
 
 </form>
     

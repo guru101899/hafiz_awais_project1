@@ -8,13 +8,7 @@
 <body>
     <form method="post">
         {% csrf_token %}
-        
-        <label> enter company income  </label><br>
-        <input type="text" name="company_income"> <br><br>
-
-        <label> enter total income</label> <br>
-        <input type="text" name="total_income"><br><br>
-
+        {{form.as_p}}
 
 
         <input type="submit" value="confirm">
